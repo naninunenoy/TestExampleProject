@@ -1,3 +1,4 @@
+using System.Linq;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,7 +7,6 @@ namespace WithTestProject
 {
     public class SampleScene : MonoBehaviour
     {
-        [SerializeField] ColorConfig colorConfig = default;
         [SerializeField] Toggle[] bitToggles = default;
         [SerializeField] Text text = default;
 
@@ -14,16 +14,10 @@ namespace WithTestProject
 
         void Start()
         {
-            foreach (var toggle in bitToggles)
-            {
-                toggle.OnValueChangedAsObservable()
-                    .Subscribe(isOn =>
-                    {
-                        toggle.targetGraphic.color = isOn ? colorConfig.OnColor : colorConfig.OffColor;
-                        SetBitText();
-                    })
-                    .AddTo(this);
-            }
+            bitToggles.Select(x => x.OnValueChangedAsObservable())
+                .Merge()
+                .Subscribe(_ => { SetBitText(); })
+                .AddTo(this);
         }
 
         void SetBitText()
