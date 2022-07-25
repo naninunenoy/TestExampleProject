@@ -1,15 +1,15 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 namespace WithTestProject
 {
-    public static class BitsToString
+    public class BitsToString
     {
-        public static string ToString(bool bit3IsOn, bool bit2IsOn, bool bit1IsOn, bool bit0IsOn)
+        public string ToString(bool bit3IsOn, bool bit2IsOn, bool bit1IsOn, bool bit0IsOn)
         {
-            throw new NotImplementedException();
+            var number = 0;
+            if (bit0IsOn) number += 1;
+            if (bit1IsOn) number += 2;
+            if (bit2IsOn) number += 4;
+            if (bit3IsOn) number += 8;
+            return $"{number:D2}";
         }
     }
 }

@@ -7,18 +7,19 @@ namespace WithTestProject.Tests
         [Test]
         public void ToStringTest()
         {
+            var bitsToString = new BitsToString();
             string answer;
-            answer = BitsToString.ToString(false, false, false, false);
+            answer = bitsToString.ToString(false, false, false, false);
             Assert.That(answer, Is.EqualTo("00"));
-            answer = BitsToString.ToString(false, false, false, true);
+            answer = bitsToString.ToString(false, false, false, true);
             Assert.That(answer, Is.EqualTo("01"));
-            answer = BitsToString.ToString(false, false, true, false);
+            answer = bitsToString.ToString(false, false, true, false);
             Assert.That(answer, Is.EqualTo("02"));
-            answer = BitsToString.ToString(false, true, false, false);
+            answer = bitsToString.ToString(false, true, false, false);
             Assert.That(answer, Is.EqualTo("04"));
-            answer = BitsToString.ToString(true, false, false, false);
+            answer = bitsToString.ToString(true, false, false, false);
             Assert.That(answer, Is.EqualTo("08"));
-            answer = BitsToString.ToString(true, true, true, true);
+            answer = bitsToString.ToString(true, true, true, true);
             Assert.That(answer, Is.EqualTo("15"));
         }
     }

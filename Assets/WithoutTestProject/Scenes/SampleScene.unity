@@ -292,7 +292,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 693679931}
         m_TargetAssemblyTypeName: WithoutTestProject.SampleScene, Assembly-CSharp
-        m_MethodName: OnClickButton2
+        m_MethodName: OnClickButton1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -386,10 +386,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1587706098}
   buttons:
-  - {fileID: 1684620491}
-  - {fileID: 768407312}
-  - {fileID: 663346795}
   - {fileID: 1260066051}
+  - {fileID: 663346795}
+  - {fileID: 768407312}
+  - {fileID: 1684620491}
 --- !u!1 &768407310
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,7 +475,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 693679931}
         m_TargetAssemblyTypeName: WithoutTestProject.SampleScene, Assembly-CSharp
-        m_MethodName: OnClickButton1
+        m_MethodName: OnClickButton2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -715,7 +715,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 693679931}
         m_TargetAssemblyTypeName: WithoutTestProject.SampleScene, Assembly-CSharp
-        m_MethodName: OnClickButton3
+        m_MethodName: OnClickButton0
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -928,7 +928,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 693679931}
         m_TargetAssemblyTypeName: WithoutTestProject.SampleScene, Assembly-CSharp
-        m_MethodName: OnClickButton0
+        m_MethodName: OnClickButton3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

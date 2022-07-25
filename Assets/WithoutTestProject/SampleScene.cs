@@ -44,10 +44,10 @@ namespace WithoutTestProject
         void UpdateText()
         {
             var number = 0;
-            if (_bits[3] == 1) number += 1;
-            if (_bits[2] == 1) number += 2;
-            if (_bits[1] == 1) number += 4;
-            if (_bits[0] == 1) number += 8;
+            for (var i = 0; i < _bits.Length; i++)
+            {
+                number += (_bits[i] << i);
+            }
             text.text = number.ToString("D2");
         }
     }
